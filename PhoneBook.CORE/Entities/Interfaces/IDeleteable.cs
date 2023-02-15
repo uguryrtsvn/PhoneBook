@@ -9,7 +9,7 @@ namespace PhoneBook.CORE.Interfaces
 {
     public interface IDeleteable
     {
-        public string DeletoryUserId { get; set; }
+        public string? DeletoryUserId { get; set; }
         public DateTime? DeletedDate { get; set; }
     }
 }

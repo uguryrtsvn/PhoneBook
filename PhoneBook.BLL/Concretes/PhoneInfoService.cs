@@ -12,37 +12,37 @@ namespace PhoneBook.BLL.Concretes
 {
     public class PhoneInfoService : IPhoneInfoService
     {
-        private readonly IPhoneInfoRepository _phoneInfoService; 
-        public PhoneInfoService(IPhoneInfoRepository phoneInfoService)
+        private readonly IPhoneInfoRepository _phoneInfoRepo; 
+        public PhoneInfoService(IPhoneInfoRepository phoneInfoRepository)
         {
-            _phoneInfoService = phoneInfoService; 
+            _phoneInfoRepo = phoneInfoRepository; 
         } 
         public async Task<bool> CreateAsync(PhoneInfo mdl)
         { 
-            return await _phoneInfoService.CreateAsync(mdl);
+            return await _phoneInfoRepo.CreateAsync(mdl);
         }
 
         public async Task<bool> DeleteAsync(Guid id)
         {
-            PhoneInfo mdl = await _phoneInfoService.GetWhere(a => a.Id == id);
-            return await _phoneInfoService.DeleteAsync(mdl);
+            PhoneInfo mdl = await _phoneInfoRepo.GetWhere(a => a.Id == id);
+            return await _phoneInfoRepo.DeleteAsync(mdl);
         }
 
         public async Task<List<PhoneInfo>> GetAllAsync()
         {
-            List<PhoneInfo> list = await _phoneInfoService.GetAllWhere(z=>z.IsActive == true); 
+            List<PhoneInfo> list = await _phoneInfoRepo.GetAllWhere(z=>z.IsActive == true); 
             return list;
         }
 
         public async Task<List<PhoneInfo>> GetAllPassivesAsync()
         {
-            List<PhoneInfo> list = await _phoneInfoService.GetAllWhere(z => z.IsActive == false);
+            List<PhoneInfo> list = await _phoneInfoRepo.GetAllWhere(z => z.IsActive == false);
             return list;
         }
 
         public async Task<PhoneInfo> GetByIdAsync(Guid id)
         {
-            PhoneInfo mdl = await _phoneInfoService.GetFilteredFirstOrDefault(
+            PhoneInfo mdl = await _phoneInfoRepo.GetFilteredFirstOrDefault(
                 selector: x => new PhoneInfo
                 {
                     Id = x.Id,
@@ -65,7 +65,7 @@ namespace PhoneBook.BLL.Concretes
 
         public async Task<bool> UpdateAsync(PhoneInfo mdl)
         { 
-            return await _phoneInfoService.UpdateAsync(mdl);
+            return await _phoneInfoRepo.UpdateAsync(mdl);
         }
     }
 }

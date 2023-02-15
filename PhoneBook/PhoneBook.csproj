@@ -7,8 +7,96 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\datatables.net\License.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\datatables.net\License.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\datatables.net\License.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\AUTHORS.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\LICENSE.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\datatables.net\js\jquery.dataTables.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\datatables.net\js\jquery.dataTables.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\datatables.net\js\jquery.dataTables.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\external\sizzle\sizzle.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\jquery.min.js" />
+    <None Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\jquery.slim.min.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\chalk\index.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\chalk\index.js.flow" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\chalk\license" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\chalk\templates.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\at-rule.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\comment.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\container.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\css-syntax-error.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\declaration.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\input.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\lazy-result.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\list.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\map-generator.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\node.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\parse.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\parser.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\postcss.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\previous-map.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\processor.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\result.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\root.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\rule.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\stringifier.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\stringify.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\terminal-highlight.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\tokenize.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\vendor.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\warn-once.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\lib\warning.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\rtlcss\bin\rtlcss.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\rtlcss\lib\config-loader.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\rtlcss\lib\config.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\rtlcss\lib\directive-parser.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\rtlcss\lib\plugin.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\rtlcss\lib\rtlcss.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\rtlcss\lib\state.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\rtlcss\lib\util.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\strip-json-comments\index.js" />
+    <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\strip-json-comments\license" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AspNetCoreHero.ToastNotification" Version="1.1.0" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.14">
       <PrivateAssets>all</PrivateAssets>
@@ -16,11 +104,51 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.14" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PhoneBook.BLL\PhoneBook.BLL.csproj" />
     <ProjectReference Include="..\PhoneBook.DAL\PhoneBook.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\libs\chartist\scss\settings\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\dist\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\external\sizzle\dist\" />
+    <Folder Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\src\" />
+    <Folder Include="wwwroot\assets\libs\flot-charts\examples\" />
+    <Folder Include="wwwroot\assets\libs\gmaps\docs\" />
+    <Folder Include="wwwroot\assets\libs\gmaps\examples\" />
+    <Folder Include="wwwroot\assets\libs\gmaps\test\" />
+    <Folder Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\chalk\types\" />
+    <Folder Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\docs\" />
+    <Folder Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\rtlcss\docs\" />
+    <Folder Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\rtlcss\node_modules\" />
+    <Folder Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\rtlcss\test\" />
+    <Folder Include="wwwroot\assets\libs\ion-rangeslider\less\skins\" />
+    <Folder Include="wwwroot\assets\libs\jquery-sparkline\src\" />
+    <Folder Include="wwwroot\assets\libs\jquery.flot.tooltip\examples\" />
+    <Folder Include="wwwroot\assets\libs\moment\src\" />
+    <Folder Include="wwwroot\assets\libs\pdfmake\src\" />
+    <Folder Include="wwwroot\assets\libs\raphael\dev\test\" />
+    <Folder Include="wwwroot\assets\libs\table-edits\src\" />
+    <Folder Include="wwwroot\assets\libs\twitter-bootstrap-wizard\examples\" />
   </ItemGroup>
 
 </Project>

@@ -9,7 +9,7 @@ namespace PhoneBook.CORE.Interfaces
 {
     public interface IEditable
     {
-        public string ModifierUserId { get; set; }
+        public string? ModifierUserId { get; set; }
         public DateTime? ModifiedDate { get; set; }
     }
 }

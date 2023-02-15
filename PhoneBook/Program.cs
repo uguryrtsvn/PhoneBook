@@ -1,9 +1,11 @@
-using AspNetCoreHero.ToastNotification;
-using AspNetCoreHero.ToastNotification.Extensions;
+﻿using AspNetCoreHero.ToastNotification;
+using AspNetCoreHero.ToastNotification.Extensions; 
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 using PhoneBook.BLL.Abstracts;
 using PhoneBook.BLL.Concretes;
 using PhoneBook.CORE.Entities.Concretes;
@@ -13,24 +15,23 @@ using PhoneBook.DAL.Repositories;
 using PhoneBook.Validators;
 using System.Reflection;
 
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(@"Server=marketanalysis.yorumingo.com\MSSQLSERVER2019; Database=PhoneBook; User Id=phone; Password=O72_sz10a; MultipleActiveResultSets=true;"));
+var builder = WebApplication.CreateBuilder(args); 
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("ConnectionStrings")["ConnString"])); 
 builder.Services.AddIdentity<AppUser, IdentityRole>(config =>
 {
     config.Password.RequiredLength = 4;
     config.Password.RequireDigit = false;
     config.Password.RequireNonAlphanumeric = false;
     config.Password.RequireUppercase = false;
-    config.SignIn.RequireConfirmedEmail = false;
-
-    config.User.RequireUniqueEmail = true;  // benzersiz mail zorunlulu�u
-    config.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+    config.SignIn.RequireConfirmedEmail = false; 
+    config.User.RequireUniqueEmail = true;  // benzersiz mail zorunluluðu
+    config.User.AllowedUserNameCharacters = "abcçdefgğhijklmnoöpqrsştuüvwxyzABCÇDEFGĞHIJKLMNOÖPQRSŞTUÜVWXYZ0123456789-._@+";
 }).AddEntityFrameworkStores<AppDbContext>()
            .AddTokenProvider<DataProtectorTokenProvider<AppUser>>(TokenOptions.DefaultProvider)
            .AddErrorDescriber<CustomIdentityErrorDescriber>()
            .AddEntityFrameworkStores<AppDbContext>();
 
-
+  
 builder.Services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 builder.Services.AddTransient<IAppUserRepository, AppUserRepository>();
 builder.Services.AddTransient<IBookRepository, BookRepository>();
@@ -43,7 +44,7 @@ builder.Services.ConfigureApplicationCookie(option =>
 {
     option.Cookie.Name = "Identity";
     option.ExpireTimeSpan = TimeSpan.FromDays(1);
-    option.SlidingExpiration = true;    // i�lem yapt�kca s�reyi uzatacak
+    option.SlidingExpiration = true;    // iþlem yaptýkca süreyi uzatacak
     option.LoginPath = "/Home/Login";
 });
 builder.Services.AddFluentValidationAutoValidation();
@@ -57,7 +58,7 @@ builder.Services.AddNotyf(options =>
     options.HasRippleEffect = true;
 });
 // Add services to the container.
-builder.Services.AddControllersWithViews(); 
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation(); 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

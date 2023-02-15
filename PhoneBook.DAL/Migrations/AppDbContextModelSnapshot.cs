@@ -166,9 +166,6 @@ namespace PhoneBook.DAL.Migrations
                     b.Property<string>("Adress")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BookId")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -270,7 +267,6 @@ namespace PhoneBook.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DeletoryUserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
@@ -280,7 +276,6 @@ namespace PhoneBook.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ModifierUserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -310,7 +305,6 @@ namespace PhoneBook.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DeletoryUserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullName")
@@ -325,7 +319,6 @@ namespace PhoneBook.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ModifierUserId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")

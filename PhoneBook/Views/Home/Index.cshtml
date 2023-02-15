@@ -1,8 +1,66 @@
-﻿@{
+﻿@model PhoneBook.CORE.Entities.Concretes.Book
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+<div class="d-grid flex-wrap gap-2 align-items-center">
+    <button type="button" onclick="CreateModalOpen()" class="btn btn-primary btn-sm waves-effect waves-light">Kişi Ekle</button> 
+</div>
+<input type="hidden" id="BookId" value="@Model.Id" />
+<div id="rehber"> 
+<partial name="_BookPartial" model="@Model" />
+</div>
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateModalLabel">Bilgileri Güncelle</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="col-form-label">İsim:</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="col-form-label">Telefon:</label>
+                        <input type="text" class="form-control" id="phone">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                <button type="button" class="btn btn-primary">Güncelle</button>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<div class="create modal fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createModalLabel">Kişi Ekle</h5>
+                <button type="button" class="btn-close" onclick="CreateModalClose()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="col-form-label">İsim:</label>
+                        <input type="text" class="form-control" id="cname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="col-form-label">Telefon:</label>
+                        <input type="text" class="form-control" id="cphone">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="CreateModalClose()">İptal</button>
+                <button type="button" class="btn btn-primary" onclick="CreatePhoneInfo()">Rehbere Ekle</button>
+            </div>
+        </div>
+    </div>
 </div>

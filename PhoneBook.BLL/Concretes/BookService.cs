@@ -97,6 +97,25 @@ namespace PhoneBook.BLL.Concretes
                 );
             return book;
         }
+        public async Task<Book> GetByUserIdAsync(string id)
+        {
+            Book book = await bookRepository.GetFilteredFirstOrDefault(
+                selector: x => new Book
+                {
+                    Id = x.Id,
+                    PhoneInfos = x.PhoneInfos,
+                    CreatedDate = x.CreatedDate,
+                    ModifiedDate = x.ModifiedDate,
+                    CreatorUser = x.CreatorUser,
+                    CreatorUserId = x.CreatorUserId,
+                    IsActive = x.IsActive,
+                    ModifierUserId = x.ModifierUserId
+                },
+                includes: x => x.Include(c => c.PhoneInfos),
+                expression: x => x.CreatorUserId == id
+                );
+            return book;
+        }
           
         public async Task<bool> UpdateAsync(Book mdl)
         { 

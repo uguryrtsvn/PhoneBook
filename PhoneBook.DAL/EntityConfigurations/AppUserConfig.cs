@@ -12,10 +12,7 @@ namespace PhoneBook.DAL.EntityConfigurations
     public class AppUserConfig : IEntityTypeConfiguration<AppUser>
     {
         public void Configure(EntityTypeBuilder<AppUser> builder)
-        {
-            builder.HasOne(x => x.Book).WithOne(x => x.CreatorUser);
-
-                 
+        {  
             //builder.HasMany(x => x.Articles).WithOne(x => x.ModifierUser).HasForeignKey(x => x.ModifierUserId);
             //builder.HasMany(x => x.Articles).WithOne(x => x.DeletoryUser).HasForeignKey(x => x.DeletoryUserId);
 

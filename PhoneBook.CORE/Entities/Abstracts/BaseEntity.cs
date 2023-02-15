@@ -12,9 +12,9 @@ namespace PhoneBook.CORE.Abstracts
     public class BaseEntity : IBaseEntity
     {
         public Guid Id { get; set; }
-        public string ModifierUserId { get; set; }
+        public string? ModifierUserId { get; set; }
         public DateTime? ModifiedDate { get; set; }
-        public string DeletoryUserId { get; set; }
+        public string? DeletoryUserId { get; set; }
         public DateTime? DeletedDate { get; set; }
         public bool IsActive { get; set; } = true;
     }

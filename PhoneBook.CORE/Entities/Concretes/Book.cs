@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 #nullable enable
 namespace PhoneBook.CORE.Entities.Concretes
 {
-    public class Book : BaseEntity, ICreateable, IEditable, IDeleteable
+    public class Book : BaseEntity, ICreateable
     {
         public Book()
         {

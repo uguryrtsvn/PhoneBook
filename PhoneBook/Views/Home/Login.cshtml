@@ -1,1 +1,37 @@
-﻿Login
+﻿@model LoginVM
+<div class="d-flex align-items-center justify-content-center">
+    <div class="row w-100 mx-0 auth-page">
+        <div class="col-md-8 col-xl-6 mx-auto">
+            <div class="card">
+                <div class="row"> 
+                    <div class="col-md-12 ps-md-0">
+                        <div class="auth-form-wrapper px-4 py-5"> 
+                            <h5 class="text-muted fw-normal mb-4">Hoşgeldiniz. Lütfen hesabınıza giriş yapın.</h5>
+                            <form class="forms-sample" asp-action="Login" asp-controller="Home" method="post">
+                                <div class="mb-3">
+                                    <label for="Email" class="form-label">Email adresi</label>
+                                    <input type="email" class="form-control" id="Email" asp-for="@Model.Email" placeholder="Email">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Password" class="form-label">Şifre</label>
+                                    <input type="password" class="form-control" id="Password" autocomplete="current-password" placeholder="Şifre" asp-for="@Model.Password">
+                                </div>
+                            
+                                <div>
+                                    <button type="submit" class="btn btn-primary me-2 mb-2 mb-md-0 text-white">Giriş</button>
+                                    <a href="~/Home/Register"  class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0"> 
+                                        Kayıt Ol
+                                    </a>
+                                </div> 
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section Scripts { 
+<partial name="_ValidationScriptsPartial"></partial>  
+}

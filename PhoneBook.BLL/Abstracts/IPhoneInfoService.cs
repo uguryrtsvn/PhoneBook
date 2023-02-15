@@ -10,11 +10,11 @@ namespace PhoneBook.BLL.Abstracts
 {
     public interface IPhoneInfoService
     {
-        Task<bool> CreateAsync(PhoneInfo categoryCreateDTO);
+        Task<bool> CreateAsync(PhoneInfo mdl);
         Task<List<PhoneInfo>> GetAllAsync();
         Task<List<PhoneInfo>> GetAllPassivesAsync();
         Task<PhoneInfo> GetByIdAsync(Guid id);
-        Task<bool> UpdateAsync(PhoneInfo categoryUpdateDTO);
+        Task<bool> UpdateAsync(PhoneInfo mdl);
         Task<bool> DeleteAsync(Guid id); 
     }
 }

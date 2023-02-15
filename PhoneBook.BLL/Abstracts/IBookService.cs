@@ -16,6 +16,7 @@ namespace PhoneBook.BLL.Abstracts
         Task<bool> DeleteAsync(Guid id);
         Task<List<Book>> GetAllPassivesAsync();
         Task<Book> GetByIdAsync(Guid id);
+        Task<Book> GetByUserIdAsync(string id);
         Task<bool> UpdateAsync(Book mdl);
  
     }
