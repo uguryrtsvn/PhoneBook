@@ -8,6 +8,7 @@
     <button type="button" onclick="CreateModalOpen()" class="btn btn-primary btn-sm waves-effect waves-light">Kişi Ekle</button> 
 </div>
 <input type="hidden" id="BookId" value="@Model.Id" />
+<input type="hidden" id="phoneInfoId" value="" />
 <div id="rehber"> 
 <partial name="_BookPartial" model="@Model" />
 </div>
@@ -16,7 +17,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="updateModalLabel">Bilgileri Güncelle</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" onclick="ModalClose('#updateModal')" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form>
@@ -31,8 +32,9 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
-                <button type="button" class="btn btn-primary">Güncelle</button>
+                <button type="button" class="btn btn-secondary" onclick="ModalClose('#updateModal')">İptal</button>
+                <button type="button" class="btn btn-danger" onclick="DeletePhoneInfo()">Sil</button>
+                <button type="button" class="btn btn-primary" onclick="UpdatePhoneInfo()">Güncelle</button> 
             </div>
         </div>
     </div>
@@ -43,7 +45,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="createModalLabel">Kişi Ekle</h5>
-                <button type="button" class="btn-close" onclick="CreateModalClose()" aria-label="Close"></button>
+                <button type="button" class="btn-close" onclick="ModalClose('#createModal')" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form>
@@ -58,7 +60,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" onclick="CreateModalClose()">İptal</button>
+                <button type="button" class="btn btn-secondary" onclick="ModalClose('#createModal')">İptal</button>
                 <button type="button" class="btn btn-primary" onclick="CreatePhoneInfo()">Rehbere Ekle</button>
             </div>
         </div>

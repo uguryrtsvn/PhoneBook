@@ -1,5 +1,6 @@
 ﻿using AspNetCoreHero.ToastNotification.Abstractions;
 using AspNetCoreHero.ToastNotification.Notyf;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PhoneBook.BLL.Abstracts;
@@ -11,6 +12,7 @@ using System.Text;
 #nullable disable
 namespace PhoneBook.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     { 
         private readonly UserManager<AppUser> _userManager;
@@ -43,10 +45,12 @@ namespace PhoneBook.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
         }
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Login(LoginVM model)
         {
@@ -73,13 +77,13 @@ namespace PhoneBook.Controllers
             _notifyService.Success($"Hoşgeldin : {user.UserName}");
             return RedirectToAction(controllerName: "Home", actionName: "Index");
         }
-
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
         }
 
-
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Register(RegisterVM model)
         {
@@ -106,7 +110,7 @@ namespace PhoneBook.Controllers
                         CreatorUser = user,
                         CreatorUserId = user.Id,
                     };
-                    var book = await _bookService.CreateAsync(b);
+                    await _bookService.CreateAsync(b);
                     _notifyService.Success("Kullanıcı kaydı başarılı. Giriş yapabilirsiniz.");
                     return RedirectToAction("Login");
                 }
@@ -132,7 +136,7 @@ namespace PhoneBook.Controllers
             _notifyService.Error(errorMsg.ToString());
             return View(model);
         }
-
+        [AllowAnonymous]
         public async Task<IActionResult> LogOut()
         { 
             await _signInManager.SignOutAsync();
@@ -147,10 +151,30 @@ namespace PhoneBook.Controllers
             }
         }
 
-
+        [HttpPost]
         public async Task<IActionResult> CreatePhoneInfo(PhoneInfo phoneInfo)
-        { 
+        {
+            var userId = _userManager.GetUserId(User);
+            phoneInfo.CreatorUserId = userId;
             var a = await _phoneInfoService.CreateAsync(phoneInfo); 
+            return PartialView("~/Views/Shared/_BookPartial.cshtml",await _bookService.GetByIdAsync(phoneInfo.BookId));
+        }    
+        [HttpPost]
+        public async Task<IActionResult> UpdatePhoneInfo(PhoneInfo phoneInfo)
+        {
+            var userId = _userManager.GetUserId(User);
+            phoneInfo.CreatorUserId = userId;
+            phoneInfo.ModifierUserId = userId;
+            var a = await _phoneInfoService.UpdateAsync(phoneInfo); 
+            return PartialView("~/Views/Shared/_BookPartial.cshtml",await _bookService.GetByIdAsync(phoneInfo.BookId));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeletePhoneInfo(PhoneInfo phoneInfo)
+        {
+            var userId = _userManager.GetUserId(User); 
+            phoneInfo.DeletoryUserId = userId;
+            var a = await _phoneInfoService.DeleteAsync(phoneInfo.Id); 
             return PartialView("~/Views/Shared/_BookPartial.cshtml",await _bookService.GetByIdAsync(phoneInfo.BookId));
         }
 

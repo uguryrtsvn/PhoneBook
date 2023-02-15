@@ -23,7 +23,7 @@ namespace PhoneBook.DAL
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            // Mevcut katmandaki bütün IEntityTypeConfiguration interface'inden türeyen configurasyonları uygulaması için
+            // Mevcut katmandaki bütün IEntityTypeConfiguration interface'inden türeyen configurasyonları uygulaması için 
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(builder);
         }

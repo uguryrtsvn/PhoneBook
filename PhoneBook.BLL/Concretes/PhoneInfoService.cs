@@ -58,7 +58,7 @@ namespace PhoneBook.BLL.Concretes
                     DeletoryUserId = x.DeletoryUserId,
                     ModifierUserId = x.ModifierUserId,
                 },
-                expression: x => x.Id == id
+                expression: x => x.Id == id && x.IsActive ==true
                 );
             return mdl;
         }

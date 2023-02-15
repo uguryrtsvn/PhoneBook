@@ -7,51 +7,45 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\datatables.net\License.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\AUTHORS.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\external\sizzle\LICENSE.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\LICENSE.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\AUTHORS.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\external\sizzle\LICENSE.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\LICENSE.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\datatables.net\License.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\AUTHORS.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\external\sizzle\LICENSE.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\LICENSE.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\AUTHORS.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\external\sizzle\LICENSE.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\LICENSE.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\datatables.net\License.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\AUTHORS.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\external\sizzle\LICENSE.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\LICENSE.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\AUTHORS.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\external\sizzle\LICENSE.txt" />
-    <Content Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\LICENSE.txt" />
+    <Compile Remove="wwwroot\assets\libs\datatables.net-bs4\**" />
+    <Compile Remove="wwwroot\assets\libs\datatables.net-buttons-bs4\**" />
+    <Compile Remove="wwwroot\assets\libs\datatables.net-buttons\**" />
+    <Compile Remove="wwwroot\assets\libs\datatables.net-responsive-bs4\**" />
+    <Compile Remove="wwwroot\assets\libs\datatables.net-responsive\**" />
+    <Compile Remove="wwwroot\assets\libs\datatables.net\**" />
+    <Compile Remove="wwwroot\assets\libs\flot-charts\**" />
+    <Compile Remove="wwwroot\assets\libs\gmaps\**" />
+    <Compile Remove="wwwroot\assets\libs\table-edits\**" />
+    <Content Remove="wwwroot\assets\libs\datatables.net-bs4\**" />
+    <Content Remove="wwwroot\assets\libs\datatables.net-buttons-bs4\**" />
+    <Content Remove="wwwroot\assets\libs\datatables.net-buttons\**" />
+    <Content Remove="wwwroot\assets\libs\datatables.net-responsive-bs4\**" />
+    <Content Remove="wwwroot\assets\libs\datatables.net-responsive\**" />
+    <Content Remove="wwwroot\assets\libs\datatables.net\**" />
+    <Content Remove="wwwroot\assets\libs\flot-charts\**" />
+    <Content Remove="wwwroot\assets\libs\gmaps\**" />
+    <Content Remove="wwwroot\assets\libs\table-edits\**" />
+    <EmbeddedResource Remove="wwwroot\assets\libs\datatables.net-bs4\**" />
+    <EmbeddedResource Remove="wwwroot\assets\libs\datatables.net-buttons-bs4\**" />
+    <EmbeddedResource Remove="wwwroot\assets\libs\datatables.net-buttons\**" />
+    <EmbeddedResource Remove="wwwroot\assets\libs\datatables.net-responsive-bs4\**" />
+    <EmbeddedResource Remove="wwwroot\assets\libs\datatables.net-responsive\**" />
+    <EmbeddedResource Remove="wwwroot\assets\libs\datatables.net\**" />
+    <EmbeddedResource Remove="wwwroot\assets\libs\flot-charts\**" />
+    <EmbeddedResource Remove="wwwroot\assets\libs\gmaps\**" />
+    <EmbeddedResource Remove="wwwroot\assets\libs\table-edits\**" />
+    <None Remove="wwwroot\assets\libs\datatables.net-bs4\**" />
+    <None Remove="wwwroot\assets\libs\datatables.net-buttons-bs4\**" />
+    <None Remove="wwwroot\assets\libs\datatables.net-buttons\**" />
+    <None Remove="wwwroot\assets\libs\datatables.net-responsive-bs4\**" />
+    <None Remove="wwwroot\assets\libs\datatables.net-responsive\**" />
+    <None Remove="wwwroot\assets\libs\datatables.net\**" />
+    <None Remove="wwwroot\assets\libs\flot-charts\**" />
+    <None Remove="wwwroot\assets\libs\gmaps\**" />
+    <None Remove="wwwroot\assets\libs\table-edits\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\datatables.net\js\jquery.dataTables.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\external\sizzle\sizzle.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\jquery.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\jquery.slim.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\external\sizzle\sizzle.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\jquery.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\jquery.slim.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\datatables.net\js\jquery.dataTables.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\external\sizzle\sizzle.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\jquery.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\jquery.slim.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\external\sizzle\sizzle.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\jquery.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\jquery.slim.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\datatables.net\js\jquery.dataTables.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\external\sizzle\sizzle.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\jquery.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\jquery.slim.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\external\sizzle\sizzle.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\jquery.min.js" />
-    <None Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\jquery.slim.min.js" />
     <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\chalk\index.js" />
     <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\chalk\index.js.flow" />
     <None Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\chalk\license" />
@@ -114,28 +108,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\assets\libs\chartist\scss\settings\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\dist\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\external\sizzle\dist\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-bs4\node_modules\jquery\src\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\dist\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\external\sizzle\dist\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-buttons-bs4\node_modules\jquery\src\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\dist\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\external\sizzle\dist\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-buttons\node_modules\jquery\src\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\dist\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\external\sizzle\dist\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-responsive-bs4\node_modules\jquery\src\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\dist\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\external\sizzle\dist\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net-responsive\node_modules\jquery\src\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\dist\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\external\sizzle\dist\" />
-    <Folder Include="wwwroot\assets\libs\datatables.net\node_modules\jquery\src\" />
-    <Folder Include="wwwroot\assets\libs\flot-charts\examples\" />
-    <Folder Include="wwwroot\assets\libs\gmaps\docs\" />
-    <Folder Include="wwwroot\assets\libs\gmaps\examples\" />
-    <Folder Include="wwwroot\assets\libs\gmaps\test\" />
     <Folder Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\chalk\types\" />
     <Folder Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\postcss\docs\" />
     <Folder Include="wwwroot\assets\libs\gulp-rtlcss\node_modules\rtlcss\docs\" />
@@ -147,7 +119,6 @@
     <Folder Include="wwwroot\assets\libs\moment\src\" />
     <Folder Include="wwwroot\assets\libs\pdfmake\src\" />
     <Folder Include="wwwroot\assets\libs\raphael\dev\test\" />
-    <Folder Include="wwwroot\assets\libs\table-edits\src\" />
     <Folder Include="wwwroot\assets\libs\twitter-bootstrap-wizard\examples\" />
   </ItemGroup>
 

@@ -81,6 +81,7 @@ namespace PhoneBook.BLL.Concretes
         public async Task<Book> GetByIdAsync(Guid id)
         {
             Book book = await bookRepository.GetFilteredFirstOrDefault(
+                expression: x => x.Id == id,
                 selector: x => new Book
                 {
                     Id = x.Id,
@@ -92,9 +93,9 @@ namespace PhoneBook.BLL.Concretes
                     IsActive = x.IsActive,
                     ModifierUserId = x.ModifierUserId
                 },
-                includes: x => x.Include(c => c.PhoneInfos),
-                expression: x => x.Id == id
+                includes: p => p.Include(c => c.PhoneInfos.Where(c => c.IsActive == true).AsQueryable())
                 );
+            book.PhoneInfos = book.PhoneInfos.Where(z => z.IsActive).ToList();
             return book;
         }
         public async Task<Book> GetByUserIdAsync(string id)
@@ -112,8 +113,9 @@ namespace PhoneBook.BLL.Concretes
                     ModifierUserId = x.ModifierUserId
                 },
                 includes: x => x.Include(c => c.PhoneInfos),
-                expression: x => x.CreatorUserId == id
+                expression: x => x.CreatorUserId == id && x.IsActive == true
                 );
+            book.PhoneInfos = book.PhoneInfos.Where(z => z.IsActive).ToList();
             return book;
         }
           
